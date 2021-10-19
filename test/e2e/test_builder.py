@@ -15,11 +15,11 @@ class BuilderTestCase(unittest.TestCase):
 
     def test_can_append_top_level_heading(self):
         self.document.append_heading('This is a top-level heading')
-        assert_that(self.document.contents(), contains_string('# This is a top-level heading'))
+        assert_that(self.document.contents(), contains_string('# This is a top-level heading\n'))
 
     def test_can_append_lower_level_heading(self):
         self.document.append_heading('This is a level two heading', 2)
-        assert_that(self.document.contents(), contains_string('## This is a level two heading'))
+        assert_that(self.document.contents(), contains_string('## This is a level two heading\n'))
 
     def test_can_indent_text(self):
         self.document.append_text_indented('Foo', 0)

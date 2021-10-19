@@ -16,9 +16,10 @@ class MarkdownDocument:
 
     def append_text(self, text: str):
         self._contents.write(text)
+        self._contents.write('\n')
 
     def append_text_indented(self, text, depth: int):
-        text = (depth*self.indentation)+text+'\n'
+        text = (depth*self.indentation)+text
         self.append_text(text)
 
     def append_link(self, text, link, depth: int=0):
