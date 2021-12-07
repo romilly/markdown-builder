@@ -18,17 +18,17 @@ class MarkdownDocument:
         self._contents.write(text)
         self._contents.write('\n')
 
-    def append_text_indented(self, text, depth: int):
+    def append_text_indented(self, text: str, depth: int):
         text = (depth*self.indentation)+text
         self.append_text(text)
 
-    def append_link(self, text, link, depth: int=0):
+    def append_link(self, text: str, link, depth: int = 0):
         self.append_text_indented(make_link(text, link), depth)
 
-    def append_bulleted_link(self, text, link, depth: int=0):
+    def append_bulleted_link(self, text: str, link: str, depth: int = 0):
         self.append_text_indented(bullet(make_link(text, link)), depth)
 
-    def append_bullet(self, text, depth=0):
+    def append_bullet(self, text: str, depth=0):
         self.append_text_indented(bullet(text), depth)
 
     def contents(self):

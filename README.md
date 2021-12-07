@@ -1,12 +1,13 @@
 # markdown-builder
 
 `markdown-builder` is a minimalist package for creating [MarkDown](https://en.wikipedia.org/wiki/Markdown)
-documents in a Python program. At present, it only supports the features required
-by those applications but I'm happy to get suggestions for additions.
+documents in a Python program.
 
 It requires Python 3.
 
 It grew out of a number of Python applications that needed similar functionality.
+At present, it only supports the features required by those applications,
+but I'm open to suggestions for additions.
 
 The [DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) 
 led me to separate out the code into a separate package.
