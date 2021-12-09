@@ -63,3 +63,9 @@ class MarkdownDocument:
 
     def append_heading(self, text, level=1):
         self.append_text(level*'#' +' ' + text)
+
+    def append_image_link(self, node_text, location, decoration):
+        self.append_text('\n\n![%s](%s)%s\n\n' % (node_text, location, decoration))
+
+    def new_page(self):
+        self.append_text('\n\n\\newpage\n\n')
